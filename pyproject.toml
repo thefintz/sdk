@@ -1,20 +1,18 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "fintz"
 version = "0.0.1"
-authors = [
-  { name="João Vicente Meyer", email="1994meyer@gmail.com" },
-]
 description = "Python client to interact with Fintz API"
+authors = ["João Vicente Meyer <1994meyer@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.7"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent",
-]
+packages = [{include = "fintz"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpx = "^0.23.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [project.urls]
 "Homepage" = "https://fintz.com.br/"
