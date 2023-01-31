@@ -18,4 +18,4 @@ jobs:
       - run: poetry install -vvv
       - run: poetry run python -m unittest discover -vb tests
       - run: poetry build -vvv --no-interaction
-      - run: poetry publish -vvv --no-interaction --password ${{ secrets.PYPI_PASSWORD }}
+      - run: poetry publish -vvv --no-interaction --username __token__ --password ${{ secrets.PYPI_PASSWORD }}
