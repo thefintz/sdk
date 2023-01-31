@@ -7,6 +7,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -17,4 +19,4 @@ jobs:
       - run: pip install poetry
       - run: poetry install -vvv
       - run: poetry run python -m unittest discover -vb tests
-      - run: poetry publish -vvv --username __token__ --password ${{ secrets.PYPI_PASSWORD }}
+      - run: poetry publish -vvv
