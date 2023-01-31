@@ -4,7 +4,7 @@ name: Build
 #   https://stackoverflow.com/a/71489231
 
 on:
-  - push:
+  push:
     tags: [ '**' ]
 
 jobs:
