@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build
 
 on:
   - push
@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pip install poetry
       - uses: actions/setup-python@v4
         with:
           cache: 'poetry'
@@ -17,5 +16,3 @@ jobs:
       - run: poetry install -vvv
       - run: poetry run python -m unittest discover -vb tests
       - run: poetry build -vvv --no-interaction
-      - run: poetry config pypi-token.pypi ${{ secrets.PYPI_PASSWORD }}
-      - run: poetry publish -vvv --no-interaction
