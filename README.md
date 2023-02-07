@@ -63,4 +63,19 @@ from fintz import Fintz
 fintz = Fintz('SUA_CHAVE_AQUI')
 ```
 
+## Desenvolvimento
+
+Para desenvolver, decidimos usar o [Poetry][2], pois facilita bastante na hora
+de realizarmos o build e de enviar para o [pypi][3]. Sendo assim, se quiser
+realizar modificações no código, basta:
+
+```
+git clone git@github.com:thefintz/sdk.git
+poetry install
+```
+
+E é isso!
+
 [1]: https://fintz.com.br/
+[2]: https://python-poetry.org/
+[3]: https://pypi.org/
