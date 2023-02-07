@@ -50,9 +50,16 @@ class Cotacoes(Endpoint):
 class Historico(Endpoint):
     _url = '/bolsa/b3/%s/historico/'
 
-    def __call__(self, ticker: str, start: date = None, end: date = None) -> dict:
+    def __call__(
+        self,
+        ticker: str,
+        start: date = None,
+        end: date = None,
+        page: int = 1,
+        size: int = 10
+    ) -> dict:
         url = self._url % ticker.upper()
-        params = {'dataInicio': start, 'dataFim': end}
+        params = {'dataInicio': start, 'dataFim': end, 'pagina': page, 'tamanho': size}
         params = {k: v for k, v in params.items() if v is not None}
         return self._fetch(url, params=params)['dados']
 

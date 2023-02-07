@@ -7,9 +7,9 @@ from ._tesouro import tesouro
 
 
 class Fintz(object):
-    def __init__(self, key: str):
+    def __init__(self, key: str = None):
         super(Fintz, self).__init__()
-        self.key = key
+        self.key = key or '29kWWEfWHB6wjtsGYCLWn9PJ8seFzgtR2Ju9UvyH'
 
         self.client = httpx.Client(
             base_url='https://api.fintz.com.br',
