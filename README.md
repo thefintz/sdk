@@ -1,5 +1,9 @@
 # Fintz SDK
 
+![Build](https://github.com/thefintz/sdk/actions/workflows/build.yml/badge.svg)
+![Pypi version](https://img.shields.io/pypi/v/fintz?color=%2334D058&label=pypi%20package)
+![Python versions](https://img.shields.io/pypi/pyversions/fintz.svg?color=%2334D058)
+
 Biblioteca python para você interagir com a API da Fintz
 
 ## Sobre
