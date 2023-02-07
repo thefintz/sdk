@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fintz"
-version = "0.0.3"
+version = "0.0.4"
 description = "Python client to interact with Fintz API"
 authors = ["João Vicente Meyer <1994meyer@gmail.com>"]
 readme = "README.md"
